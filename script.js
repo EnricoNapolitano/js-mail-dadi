@@ -4,6 +4,7 @@ const maxNumber = 6;
 const playerNumber = document.getElementById("player-number");
 const cpuNumber = document.getElementById("cpu-number");
 const gameResult = document.getElementById ("game-result");
+const resetButton = document.getElementById ("reset");
 
 playerButton.addEventListener('click', function(){
     const random = Math.random();
@@ -24,6 +25,10 @@ playerButton.addEventListener('click', function(){
         } else {
             gameResult.innerText = "mi dispiace, non hai vinto!";
         }
+
+        resetButton.addEventListener('click', function(){
+            playerNumber.innerText = cpuNumber.innerText = gameResult.innerText = '';
+        })
     })
 })
 
