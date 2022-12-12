@@ -1,3 +1,5 @@
+//* GIOCO DEI DADI
+
 const playerButton = document.getElementById("player-button");
 const cpuButton = document.getElementById("cpu-button");
 const maxNumber = 6;
@@ -32,3 +34,23 @@ playerButton.addEventListener('click', function(){
     })
 })
 
+// -------------------------------------------------------------------------------------------------------------------
+
+//* Finta Log In
+
+const userEmail = document.getElementById("user-email");
+const emailMessage = document.getElementById ("email-message");
+const logIN = document.getElementById("log-in");
+const emails = ["happyhippo@safari.net", "flyingdumbo@disney.com", "gandalf@lordofrings.org"]
+// console.table(emails);
+
+
+logIN.addEventListener('click', function(){
+    for (let i = 0; i < emails.length; i++) {
+        if (userEmail.value === emails[i]) {
+         emailMessage.innerText = "email valida, puoi effettuare l'accesso."
+        } else {
+            emailMessage.innerText = "email non valida. Non puoi effettuare l'accesso."
+        }
+    }
+})
